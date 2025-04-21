@@ -131,31 +131,31 @@ IF "$amigaos32adf" EQ 1 VAL
 ENDIF
 
 
-; amiga os 3.2.1
+; amiga os 3.2.3
 ; --------------
 
-; set amigaos321adf to 1
-set amigaos321adf "1"
+; set amigaos323adf to 1
+set amigaos323adf "1"
 
-IF NOT EXISTS "INSTALLDIR:Temp/Amiga-OS/amiga-os-321-update.adf"
-  echo "Amiga OS 3.2.1 Update adf doesn't exist!" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set amigaos321adf "0"
+IF NOT EXISTS "INSTALLDIR:Temp/Amiga-OS/amiga-os-323-update.adf"
+  echo "Amiga OS 3.2.3 Update adf doesn't exist!" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set amigaos323adf "0"
 ENDIF
 
-IF NOT EXISTS "INSTALLDIR:Temp/Amiga-OS/amiga-os-321-classes.adf"
-  echo "Amiga OS 3.2.1 Classes adf doesn't exist!" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set amigaos321adf "0"
+IF NOT EXISTS "INSTALLDIR:Temp/Amiga-OS/amiga-os-323-classes.adf"
+  echo "Amiga OS 3.2.3 Classes adf doesn't exist!" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set amigaos323adf "0"
 ENDIF
 
-IF NOT EXISTS "INSTALLDIR:Temp/Amiga-OS/amiga-os-321-classes.adf"
-  echo "Amiga OS 3.2.1 Classes adf doesn't exist!" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set amigaos321adf "0"
+IF NOT EXISTS "INSTALLDIR:Temp/Amiga-OS/amiga-os-323-classes.adf"
+  echo "Amiga OS 3.2.3 Classes adf doesn't exist!" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set amigaos323adf "0"
 ENDIF
 
-; create amiga os 3.2.1 adf prefs, if amigaos321adf is 1
-IF "$amigaos321adf" EQ 1 VAL
-  echo "" >INSTALLDIR:Prefs/Amiga-OS-321-ADF
-  echo "Amiga OS 3.2.1 adf files detected" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+; create amiga os 3.2.3 adf prefs, if amigaos323adf is 1
+IF "$amigaos323adf" EQ 1 VAL
+  echo "" >INSTALLDIR:Prefs/Amiga-OS-323-ADF
+  echo "Amiga OS 3.2.3 adf files detected" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
 ENDIF
 
 ; End

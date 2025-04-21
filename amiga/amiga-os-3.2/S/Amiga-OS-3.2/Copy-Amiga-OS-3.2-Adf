@@ -183,41 +183,41 @@ IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Backdrops"`" EQ ""
   SKIP copyadffile
 ENDIF
 
-; amiga os 3.2.1
+; amiga os 3.2.3
 ; --------------
 
-; copy amiga os 3.2.1 classes file, if classes adf is valid
-IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Classes3.2.1"`" EQ ""
-  echo "Amiga OS 3.2.1 Classes adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set adffilename "amiga-os-321-classes.adf"
+; copy amiga os 3.2.3 classes file, if classes adf is valid
+IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Classes3.2.3"`" EQ ""
+  echo "Amiga OS 3.2.3 Classes adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set adffilename "amiga-os-323-classes.adf"
   SKIP copyadffile
 ENDIF
 
-; copy amiga os 3.2.1 disk doctor file, if disk doctor adf is valid
-IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-DiskDoctor3.2.1"`" EQ ""
-  echo "Amiga OS 3.2.1 Disk Doctor adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set adffilename "amiga-os-321-disk-doctor.adf"
+; copy amiga os 3.2.3 disk doctor file, if disk doctor adf is valid
+IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-DiskDoctor3.2.3"`" EQ ""
+  echo "Amiga OS 3.2.3 Disk Doctor adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set adffilename "amiga-os-323-disk-doctor.adf"
   SKIP copyadffile
 ENDIF
 
-; copy amiga os 3.2.1 locale file, if locale adf is valid
-IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Locale3.2.1"`" EQ ""
-  echo "Amiga OS 3.2.1 Locale adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set adffilename "amiga-os-321-locale.adf"
+; copy amiga os 3.2.3 locale file, if locale adf is valid
+IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Locale3.2.3"`" EQ ""
+  echo "Amiga OS 3.2.3 Locale adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set adffilename "amiga-os-323-locale.adf"
   SKIP copyadffile
 ENDIF
 
-; copy amiga os 3.2.1 modules file, if modules adf is valid
-IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Modules3.2.1"`" EQ ""
-  echo "Amiga OS 3.2.1 Modules $modulesname adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set adffilename "amiga-os-321-modules-$modulesfile.adf"
+; copy amiga os 3.2.3 modules file, if modules adf is valid
+IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Modules3.2.3"`" EQ ""
+  echo "Amiga OS 3.2.3 Modules $modulesname adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set adffilename "amiga-os-323-modules-$modulesfile.adf"
   SKIP copyadffile
 ENDIF
 
-; copy amiga os 3.2.1 update file, if update adf is valid
-IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Update3.2.1"`" EQ ""
-  echo "Amiga OS 3.2.1 Update adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
-  set adffilename "amiga-os-321-update.adf"
+; copy amiga os 3.2.3 update file, if update adf is valid
+IF "`Execute "INSTALLDIR:S/Amiga-OS-3.2/Detect-Update3.2.3"`" EQ ""
+  echo "Amiga OS 3.2.3 Update adf detected using mount file" >>INSTALLDIR:Temp/Amiga-OS-32-Adf.log
+  set adffilename "amiga-os-323-update.adf"
   SKIP copyadffile
 ENDIF
 

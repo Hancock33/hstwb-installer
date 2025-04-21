@@ -162,17 +162,17 @@ echo "" NOLINE >INSTALLDIR:Prefs/Amiga-OS-3.2
 
 ; get update install
 set updateinstall "0"
-If Exists "INSTALLDIR:Prefs/Install-Amiga-OS-321-ADF"
-  set updateinstall "`type INSTALLDIR:Prefs/Install-Amiga-OS-321-ADF`"
+If Exists "INSTALLDIR:Prefs/Install-Amiga-OS-323-ADF"
+  set updateinstall "`type INSTALLDIR:Prefs/Install-Amiga-OS-323-ADF`"
 EndIf
 
-; install amiga os 3.2.1 update, if install update is 1
+; install amiga os 3.2.3 update, if install update is 1
 IF "$updateinstall" EQ 1 VAL
-  ; run install amiga os 3.2.1 adf
-  execute "INSTALLDIR:S/Amiga-OS-3.2/Install-Adf-3.2.1"
+  ; run install amiga os 3.2.3 adf
+  execute "INSTALLDIR:S/Amiga-OS-3.2/Install-Adf-3.2.3"
 
-  ; create amiga os 3.2.1 prefs
-  echo "" NOLINE >INSTALLDIR:Prefs/Amiga-OS-3.2.1
+  ; create amiga os 3.2.3 prefs
+  echo "" NOLINE >INSTALLDIR:Prefs/Amiga-OS-3.2.3
 ENDIF 
 
 echo ""

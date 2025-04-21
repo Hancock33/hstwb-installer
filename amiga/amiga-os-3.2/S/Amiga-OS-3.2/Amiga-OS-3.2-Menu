@@ -179,11 +179,11 @@ echo "--------------------------------------------------" >>T:_amigaosmenu
 IF "$selfinstall" EQ 1 VAL
   set splitter "0"
   
-  ; 3.2.1 update option
-  IF EXISTS "INSTALLDIR:Prefs/Amiga-OS-321-ADF"
+  ; 3.2.3 update option
+  IF EXISTS "INSTALLDIR:Prefs/Amiga-OS-323-ADF"
     set splitter "1"
     set menuoption `eval $menuoption + 1`
-    echo "Amiga OS 3.2.1 Update detected" >>"T:_amigaosmenu"
+    echo "Amiga OS 3.2.3 Update detected" >>"T:_amigaosmenu"
   ENDIF
 
   ; add splitter if support files are present
@@ -263,10 +263,10 @@ echo "echo *"Amiga-OS-32-ADF*" NOLINE >INSTALLDIR:Prefs/Install-Amiga-OS" >>T:_a
 echo "echo *"*$amigaosinstall*" NOLINE >INSTALLDIR:Prefs/Install-Amiga-OS-32-ADF" >>T:_amigaos32menu
 echo "echo *"*" NOLINE >INSTALLDIR:Prefs/Continue-Amiga-OS-Install" >>T:_amigaos32menu
 
-echo "IF EXISTS INSTALLDIR:Prefs/Amiga-OS-321-ADF" >>T:_amigaos32menu
-echo "  echo *"1*" NOLINE >INSTALLDIR:Prefs/Install-Amiga-OS-321-ADF" >>T:_amigaos32menu
+echo "IF EXISTS INSTALLDIR:Prefs/Amiga-OS-323-ADF" >>T:_amigaos32menu
+echo "  echo *"1*" NOLINE >INSTALLDIR:Prefs/Install-Amiga-OS-323-ADF" >>T:_amigaos32menu
 echo "ELSE" >>T:_amigaos32menu
-echo "  echo *"0*" NOLINE >INSTALLDIR:Prefs/Install-Amiga-OS-321-ADF" >>T:_amigaos32menu
+echo "  echo *"0*" NOLINE >INSTALLDIR:Prefs/Install-Amiga-OS-323-ADF" >>T:_amigaos32menu
 echo "ENDIF" >>T:_amigaos32menu
 
 echo "" >>T:_amigaos32menu

@@ -2229,23 +2229,23 @@ function RunInstall($hstwb)
                 Set-Content $installAmigaOs32PrefsFile -Value ""                    
             }       
 
-            # find amiga os 3.2.1 modules adf in amiga os set
-            $amigaOs321Adfs = $amigaOsSetEntries | Where-Object { $_.File -and $_.Filename -match '^amiga-os-321-[^\.]+\.adf$'}
-            $amigaOs321ClassesAdf = $amigaOs321Adfs | Where-Object { $_.File -and $_.Filename -match '^amiga-os-321-classes.adf$'} | Select-Object -First 1
-            $amigaOs321UpdateAdf = $amigaOs321Adfs | Where-Object { $_.File -and $_.Filename -match '^amiga-os-321-update.adf$'} | Select-Object -First 1
-            if ($amigaOs321ClassesAdf -and $amigaOs321UpdateAdf)
+            # find amiga os 3.2.3 modules adf in amiga os set
+            $amigaOs323Adfs = $amigaOsSetEntries | Where-Object { $_.File -and $_.Filename -match '^amiga-os-323-[^\.]+\.adf$'}
+            $amigaOs323ClassesAdf = $amigaOs323Adfs | Where-Object { $_.File -and $_.Filename -match '^amiga-os-323-classes.adf$'} | Select-Object -First 1
+            $amigaOs323UpdateAdf = $amigaOs323Adfs | Where-Object { $_.File -and $_.Filename -match '^amiga-os-323-update.adf$'} | Select-Object -First 1
+            if ($amigaOs323ClassesAdf -and $amigaOs323UpdateAdf)
             {
-                # create amiga os 3.2.1 prefs file
-                $installAmigaOsPrefsFile = Join-Path $prefsDir -ChildPath 'Amiga-OS-321-ADF'
+                # create amiga os 3.2.3 prefs file
+                $installAmigaOsPrefsFile = Join-Path $prefsDir -ChildPath 'Amiga-OS-323-ADF'
                 Set-Content $installAmigaOsPrefsFile -NoNewline -Value ''
 
                 # create install amiga os prefs file
-                $installAmigaOsPrefsFile = Join-Path $prefsDir -ChildPath 'Install-Amiga-OS-321-ADF'
+                $installAmigaOsPrefsFile = Join-Path $prefsDir -ChildPath 'Install-Amiga-OS-323-ADF'
                 Set-Content $installAmigaOsPrefsFile -NoNewline -Value '1'
 
-                # create install amiga os 3.2.1 modules adf prefs files
-                foreach ($amigaOs321ModuleAdf in ($amigaOs321Adfs | Where-Object { $_.Model -and $_.Model -notmatch '^\s*$' })) {
-                    $installAmigaOs32PrefsFile = Join-Path $prefsDir -ChildPath ('Amiga-OS-321-{0}-ADF' -f $amigaOs321ModuleAdf.Model)
+                # create install amiga os 3.2.3 modules adf prefs files
+                foreach ($amigaOs323ModuleAdf in ($amigaOs323Adfs | Where-Object { $_.Model -and $_.Model -notmatch '^\s*$' })) {
+                    $installAmigaOs32PrefsFile = Join-Path $prefsDir -ChildPath ('Amiga-OS-323-{0}-ADF' -f $amigaOs323ModuleAdf.Model)
                     Set-Content $installAmigaOs32PrefsFile -Value ""                    
                 }            
             }
