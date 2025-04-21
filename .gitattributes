@@ -3,6 +3,7 @@
 
 # unix forced line-endings
 /amiga/* text eol=lf
+/user-packages/* text eol=lf
 
 # archives
 *.lha binary
